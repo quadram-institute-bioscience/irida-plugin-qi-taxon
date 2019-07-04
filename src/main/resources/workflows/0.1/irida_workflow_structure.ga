@@ -1,0 +1,113 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "qi-taxon",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "sequence_reads_paired"
+                }
+            ],
+            "label": "sequence_reads_paired",
+            "name": "Input dataset collection",
+            "outputs": [],
+            "position": {
+                "left": 215,
+                "top": 288
+            },
+            "tool_id": null,
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}",
+            "tool_version": null,
+            "type": "data_collection_input",
+            "uuid": "990ea469-3312-4431-adfa-269a9a0d695c",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "8950e87a-4ca1-4f09-9efc-d14c068c4557"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jdv/centrifuge/centrifuge/1.0.3",
+            "errors": null,
+            "id": 1,
+            "input_connections": {
+                "inputs|paired_0|p_reads": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Centrifuge",
+            "outputs": [
+                {
+                    "name": "out_tab",
+                    "type": "tabular"
+                },
+                {
+                    "name": "out_sam",
+                    "type": "sam"
+                },
+                {
+                    "name": "report",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "left": 656.5,
+                "top": 262
+            },
+            "post_job_actions": {
+                "HideDatasetActionout_sam": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "out_sam"
+                },
+                "HideDatasetActionout_tab": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "out_tab"
+                },
+                "RenameDatasetActionreport": {
+                    "action_arguments": {
+                        "newname": "report.txt"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "report"
+                }
+            },
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jdv/centrifuge/centrifuge/1.0.3",
+            "tool_shed_repository": {
+                "changeset_revision": "b4f88058af70",
+                "name": "centrifuge",
+                "owner": "jdv",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"classification\": \"{\\\"exclude_taxids\\\": \\\"\\\", \\\"host_taxids\\\": \\\"\\\", \\\"min_hitlen\\\": \\\"22\\\", \\\"min_totallen\\\": \\\"\\\"}\", \"inputs\": \"{\\\"db\\\": \\\"abvfh_2019\\\", \\\"paired\\\": [{\\\"__index__\\\": 0, \\\"p_reads\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}], \\\"sra\\\": \\\"\\\", \\\"unpaired\\\": []}\", \"outputs\": \"{\\\"out_fmt\\\": \\\"tab\\\", \\\"tab_fmt_cols\\\": \\\"readID,seqID,taxID,score,2ndBestScore,hitLength,queryLength,numMatches\\\"}\", \"__rerun_remap_job_id__\": null, \"general\": \"{\\\"ignore_quals\\\": \\\"false\\\", \\\"nofw\\\": \\\"false\\\", \\\"non_deterministic\\\": \\\"false\\\", \\\"norc\\\": \\\"false\\\", \\\"seed\\\": \\\"\\\", \\\"skip\\\": \\\"\\\", \\\"trim3\\\": \\\"\\\", \\\"trim5\\\": \\\"\\\", \\\"upto\\\": \\\"\\\"}\"}",
+            "tool_version": "1.0.3",
+            "type": "tool",
+            "uuid": "f1ff2942-6c18-4ccc-bacd-0bc04ed18d70",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "report",
+                    "uuid": "d31ac011-33f4-47e0-88a5-06b9cdc9e0ab"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "db2385dc-7f83-4bf2-aa83-4ba60befa231",
+    "version": 3
+}

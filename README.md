@@ -101,4 +101,4 @@ The following dependencies are required in order to make use of this plugin.
 [messages]: src/main/resources/workflows/0.1.0/messages_en.properties
 [maven-min-pom]: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Minimal_POM
 [pf4j-start]: https://pf4j.org/doc/getting-started.html
-[pipeline-parameters.png]: doc/images/workflow.png
+[workflow.png]: doc/images/workflow.png

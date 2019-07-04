@@ -21,7 +21,7 @@
             "outputs": [],
             "position": {
                 "left": 215,
-                "top": 288
+                "top": 325
             },
             "tool_id": null,
             "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}",
@@ -66,7 +66,7 @@
             ],
             "position": {
                 "left": 656.5,
-                "top": 262
+                "top": 299
             },
             "post_job_actions": {
                 "HideDatasetActionout_sam": {
@@ -78,6 +78,11 @@
                     "action_arguments": {},
                     "action_type": "HideDatasetAction",
                     "output_name": "out_tab"
+                },
+                "HideDatasetActionreport": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "report"
                 },
                 "RenameDatasetActionreport": {
                     "action_arguments": {
@@ -98,16 +103,67 @@
             "tool_version": "1.0.3",
             "type": "tool",
             "uuid": "f1ff2942-6c18-4ccc-bacd-0bc04ed18d70",
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/1.1.1",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "infile": {
+                    "id": 1,
+                    "output_name": "report"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Sort",
+                    "name": "infile"
+                }
+            ],
+            "label": null,
+            "name": "Sort",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "left": 965.5,
+                "top": 289
+            },
+            "post_job_actions": {
+                "RenameDatasetActionoutfile": {
+                    "action_arguments": {
+                        "newname": "centrifuge.tsv"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "outfile"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/1.1.1",
+            "tool_shed_repository": {
+                "changeset_revision": "0a8c6b61f0f4",
+                "name": "text_processing",
+                "owner": "bgruening",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"sortkeys\": \"[{\\\"__index__\\\": 0, \\\"column\\\": \\\"7\\\", \\\"order\\\": \\\"r\\\", \\\"style\\\": \\\"g\\\"}]\", \"__page__\": null, \"ignore_case\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"header\": \"\\\"1\\\"\", \"unique\": \"\\\"false\\\"\", \"infile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+            "tool_version": "1.1.1",
+            "type": "tool",
+            "uuid": "eb406815-4488-43dd-927d-606321f0bdc8",
             "workflow_outputs": [
                 {
                     "label": null,
-                    "output_name": "report",
-                    "uuid": "d31ac011-33f4-47e0-88a5-06b9cdc9e0ab"
+                    "output_name": "outfile",
+                    "uuid": "239526ed-0b53-4aa9-aee6-30df9b4c43d0"
                 }
             ]
         }
     },
     "tags": [],
-    "uuid": "db2385dc-7f83-4bf2-aa83-4ba60befa231",
-    "version": 3
+    "uuid": "6faea904-e10d-43f7-9075-cd75d1e179d9",
+    "version": 4
 }

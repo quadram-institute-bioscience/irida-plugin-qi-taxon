@@ -1,7 +1,7 @@
 <iridaWorkflow>
-  <id>38ef80f4-4e1e-4f92-b7f7-e287db473dbc</id>
+  <id>3f60a628-76e9-4a44-98af-a63567b37cb7</id>
   <name>QITaxon</name>
-  <version>0.13</version>
+  <version>0.2</version>
   <analysisType>QI_TAXON</analysisType>
   <inputs>
     <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
@@ -53,11 +53,26 @@
     <parameter defaultValue="abvfh_2019" name="centrifuge-1-inputs.db">
       <toolParameter parameterName="inputs.db" toolId="testtoolshed.g2.bx.psu.edu/repos/jdv/centrifuge/centrifuge/1.0.3" />
     </parameter>
+    <parameter defaultValue="false" name="text_processing-2-ignore_case">
+      <toolParameter parameterName="ignore_case" toolId="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/1.1.1" />
+    </parameter>
+    <parameter defaultValue="1" name="text_processing-2-header">
+      <toolParameter parameterName="header" toolId="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/1.1.1" />
+    </parameter>
+    <parameter defaultValue="false" name="text_processing-2-unique">
+      <toolParameter parameterName="unique" toolId="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/1.1.1" />
+    </parameter>
   </parameters>
   <outputs>
-    <output fileName="report.txt" name="report.txt" />
+    <output fileName="centrifuge.tsv" name="centrifuge.tsv" />
   </outputs>
   <toolRepositories>
+    <repository>
+      <name>text_processing</name>
+      <owner>bgruening</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>0a8c6b61f0f4</revision>
+    </repository>
     <repository>
       <name>centrifuge</name>
       <owner>jdv</owner>

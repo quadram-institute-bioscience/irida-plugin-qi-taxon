@@ -74,7 +74,7 @@ public class QITaxonPlugin extends Plugin {
 		 */
 		@Override
 		public UUID getDefaultWorkflowUUID() {
-			return UUID.fromString("38ef80f4-4e1e-4f92-b7f7-e287db473dbc");
+			return UUID.fromString("3f60a628-76e9-4a44-98af-a63567b37cb7");
 		}
 
 		/*******************************************************************************
@@ -92,7 +92,7 @@ public class QITaxonPlugin extends Plugin {
 		 */
 		@Override
 		public Optional<Color> getBackgroundColor() {
-			return Optional.of(Color.decode("#dd1c77"));
+			return Optional.of(Color.decode("#FE9174"));
 		}
 
 		/**

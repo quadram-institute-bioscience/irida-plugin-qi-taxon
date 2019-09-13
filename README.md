@@ -26,6 +26,11 @@ This project contains a read classification pipeline implemented as a plugin for
 
 ![workflow.png][]  
 
+# Required Galaxy tools
+
+* testtoolshed.g2.bx.psu.edu/repos/jdv/centrifuge/centrifuge/1.0.3
+* irida.corefacility.ca/galaxy-shed/repos/irida/bundle_collections/bundle_collection/1.0.2
+
 # Building/Packaging
 
 Building and packaging this code is accomplished using [Apache Maven][maven]. However, you will first need to install 

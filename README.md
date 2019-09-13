@@ -2,26 +2,6 @@
 
 This project contains a read classification pipeline implemented as a plugin for the [IRIDA][] bioinformatics analysis system. 
 
-# Table of Contents
-
-   * [Building/Packaging](#buildingpackaging)
-      * [Installing IRIDA to local Maven repository](#installing-irida-to-local-maven-repository)
-      * [Building the plugin](#building-the-plugin)
-   * [Dependencies](#dependencies)
-   * [Using as a template for developing a plugin](#using-as-a-template-for-developing-a-plugin)
-      * [1. Place necessary pipeline files in <a href="src/main/resources/workflows">src/main/resources/workflows</a>](#1-place-necessary-pipeline-files-in-srcmainresourcesworkflows)
-         * [1.1. Creating pipeline files](#11-creating-pipeline-files)
-         * [1.2. Updating pipeline files](#12-updating-pipeline-files)
-            * [1.2.1. Modifying irida_workflow.xml](#121-modifying-irida_workflowxml)
-            * [1.2.2. Modifying messages_en.properties](#122-modifying-messages_enproperties)
-      * [2. Update <a href="src/main/java/ca/corefacility/bioinformatics/irida/plugins/ExamplePlugin.java">src/main/java/ca/corefacility/bioinformatics/irida/plugins/ExamplePlugin.java</a>](#2-update-srcmainjavacacorefacilitybioinformaticsiridapluginsexamplepluginjava)
-      * [3. (Optional) Implement an <a href="src/main/java/ca/corefacility/bioinformatics/irida/plugins/ExamplePluginUpdater.java">Updater</a> class](#3-optional-implement-an-updater-class)
-      * [4. Update the <a href="pom.xml">pom.xml</a> file](#4-update-the-pomxml-file)
-         * [4.1. Update the Maven version/info](#41-update-the-maven-versioninfo)
-         * [4.2. Update the properties section/plugin info](#42-update-the-properties-sectionplugin-info)
-      * [5. Build and Test](#5-build-and-test)
-      * [6. Distribute](#6-distribute)
-
 # Workflow
 
 ![workflow.png][]  

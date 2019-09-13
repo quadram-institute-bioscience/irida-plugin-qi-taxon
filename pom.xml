@@ -6,7 +6,7 @@
 
 	<groupId>ca.corefacility.bioinformatics.irida.plugins</groupId>
 	<artifactId>qi-taxon</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.1.1-SNAPSHOT</version>
 
 	<!-- Please fill out these properties with information about your particular plugin -->
 	<properties>

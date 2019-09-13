@@ -74,7 +74,7 @@ public class QITaxonPlugin extends Plugin {
 		 */
 		@Override
 		public UUID getDefaultWorkflowUUID() {
-			return UUID.fromString("4e9f52f6-cf4c-4eec-9177-450bc00e8f40");
+			return UUID.fromString("1accdf36-eefa-494b-b80b-ff2e924b679d");
 		}
 
 		/*******************************************************************************
@@ -106,24 +106,5 @@ public class QITaxonPlugin extends Plugin {
 			return Optional.of(Color.BLACK);
 		}
 
-		/**
-		 * Builds a {@link Optional} {@link AnalysisSampleUpdater} used to update
-		 * metadata from the pipeline results.
-		 * 
-		 * @param metadataTemplateService An IRIDA service to manipulate and save
-		 *                                metadata templates.
-		 * @param sampleService           An IRIDA service to manipulate and save
-		 *                                information associated with a {@link Sample}.
-		 * @param iridaWorkflowsService   An IRIDA service for getting information about
-		 *                                the workflow.
-		 * 
-		 * @return An {@link Optional} {@link AnalysisSampleUpdater} used to update
-		 *         metadata from the pipeline results.
-		 */
-//		@Override
-//		public Optional<AnalysisSampleUpdater> getUpdater(MetadataTemplateService metadataTemplateService,
-//				SampleService sampleService, IridaWorkflowsService iridaWorkflowsService) throws IridaPluginException {
-//			return Optional.of(new QITaxonPluginUpdater(metadataTemplateService, sampleService, iridaWorkflowsService));
-//		}
 	}
 }

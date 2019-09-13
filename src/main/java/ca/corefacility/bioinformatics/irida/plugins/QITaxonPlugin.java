@@ -74,7 +74,7 @@ public class QITaxonPlugin extends Plugin {
 		 */
 		@Override
 		public UUID getDefaultWorkflowUUID() {
-			return UUID.fromString("3f60a628-76e9-4a44-98af-a63567b37cb7");
+			return UUID.fromString("4e9f52f6-cf4c-4eec-9177-450bc00e8f40");
 		}
 
 		/*******************************************************************************
@@ -120,10 +120,10 @@ public class QITaxonPlugin extends Plugin {
 		 * @return An {@link Optional} {@link AnalysisSampleUpdater} used to update
 		 *         metadata from the pipeline results.
 		 */
-		@Override
-		public Optional<AnalysisSampleUpdater> getUpdater(MetadataTemplateService metadataTemplateService,
-				SampleService sampleService, IridaWorkflowsService iridaWorkflowsService) throws IridaPluginException {
-			return Optional.of(new QITaxonPluginUpdater(metadataTemplateService, sampleService, iridaWorkflowsService));
-		}
+//		@Override
+//		public Optional<AnalysisSampleUpdater> getUpdater(MetadataTemplateService metadataTemplateService,
+//				SampleService sampleService, IridaWorkflowsService iridaWorkflowsService) throws IridaPluginException {
+//			return Optional.of(new QITaxonPluginUpdater(metadataTemplateService, sampleService, iridaWorkflowsService));
+//		}
 	}
 }

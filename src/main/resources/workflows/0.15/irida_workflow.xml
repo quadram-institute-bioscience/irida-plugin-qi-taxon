@@ -1,7 +1,7 @@
 <iridaWorkflow>
-  <id>3f60a628-76e9-4a44-98af-a63567b37cb7</id>
+  <id>4e9f52f6-cf4c-4eec-9177-450bc00e8f40</id>
   <name>QITaxon</name>
-  <version>0.2</version>
+  <version>0.15</version>
   <analysisType>QI_TAXON</analysisType>
   <inputs>
     <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
@@ -64,9 +64,15 @@
     </parameter>
   </parameters>
   <outputs>
-    <output fileName="centrifuge.tsv" name="centrifuge.tsv" />
+    <output fileName="report.zip" name="report.zip" />
   </outputs>
   <toolRepositories>
+    <repository>
+      <name>bundle_collections</name>
+      <owner>irida</owner>
+      <url>https://irida.corefacility.ca/galaxy-shed</url>
+      <revision>7bc329e1ada4</revision>
+    </repository>
     <repository>
       <name>text_processing</name>
       <owner>bgruening</owner>

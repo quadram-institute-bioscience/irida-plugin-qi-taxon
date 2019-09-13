@@ -20,8 +20,8 @@
             "name": "Input dataset collection",
             "outputs": [],
             "position": {
-                "left": 215,
-                "top": 325
+                "left": 246,
+                "top": 206
             },
             "tool_id": null,
             "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}",
@@ -32,7 +32,7 @@
                 {
                     "label": null,
                     "output_name": "output",
-                    "uuid": "8950e87a-4ca1-4f09-9efc-d14c068c4557"
+                    "uuid": "abcad589-8d9c-487a-8e80-57652b872dfb"
                 }
             ]
         },
@@ -56,24 +56,15 @@
                     "type": "tabular"
                 },
                 {
-                    "name": "out_sam",
-                    "type": "sam"
-                },
-                {
                     "name": "report",
                     "type": "tabular"
                 }
             ],
             "position": {
-                "left": 656.5,
-                "top": 299
+                "left": 522,
+                "top": 123
             },
             "post_job_actions": {
-                "HideDatasetActionout_sam": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "out_sam"
-                },
                 "HideDatasetActionout_tab": {
                     "action_arguments": {},
                     "action_type": "HideDatasetAction",
@@ -82,13 +73,6 @@
                 "HideDatasetActionreport": {
                     "action_arguments": {},
                     "action_type": "HideDatasetAction",
-                    "output_name": "report"
-                },
-                "RenameDatasetActionreport": {
-                    "action_arguments": {
-                        "newname": "report.txt"
-                    },
-                    "action_type": "RenameDatasetAction",
                     "output_name": "report"
                 }
             },
@@ -99,10 +83,10 @@
                 "owner": "jdv",
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"__page__\": null, \"classification\": \"{\\\"exclude_taxids\\\": \\\"\\\", \\\"host_taxids\\\": \\\"\\\", \\\"min_hitlen\\\": \\\"22\\\", \\\"min_totallen\\\": \\\"\\\"}\", \"inputs\": \"{\\\"db\\\": \\\"abvfh_2019\\\", \\\"paired\\\": [{\\\"__index__\\\": 0, \\\"p_reads\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}], \\\"sra\\\": \\\"\\\", \\\"unpaired\\\": []}\", \"outputs\": \"{\\\"out_fmt\\\": \\\"tab\\\", \\\"tab_fmt_cols\\\": \\\"readID,seqID,taxID,score,2ndBestScore,hitLength,queryLength,numMatches\\\"}\", \"__rerun_remap_job_id__\": null, \"general\": \"{\\\"ignore_quals\\\": \\\"false\\\", \\\"nofw\\\": \\\"false\\\", \\\"non_deterministic\\\": \\\"false\\\", \\\"norc\\\": \\\"false\\\", \\\"seed\\\": \\\"\\\", \\\"skip\\\": \\\"\\\", \\\"trim3\\\": \\\"\\\", \\\"trim5\\\": \\\"\\\", \\\"upto\\\": \\\"\\\"}\"}",
+            "tool_state": "{\"__page__\": null, \"classification\": \"{\\\"exclude_taxids\\\": \\\"\\\", \\\"host_taxids\\\": \\\"\\\", \\\"min_hitlen\\\": \\\"22\\\", \\\"min_totallen\\\": \\\"\\\"}\", \"inputs\": \"{\\\"db\\\": \\\"abvfh_2019\\\", \\\"paired\\\": [{\\\"__index__\\\": 0, \\\"p_reads\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}}], \\\"sra\\\": \\\"\\\", \\\"unpaired\\\": []}\", \"outputs\": \"{\\\"out_fmt\\\": \\\"tab\\\", \\\"tab_fmt_cols\\\": \\\"readID,seqID,taxID,score,2ndBestScore,hitLength,queryLength,numMatches\\\"}\", \"__rerun_remap_job_id__\": null, \"general\": \"{\\\"ignore_quals\\\": \\\"false\\\", \\\"nofw\\\": \\\"false\\\", \\\"non_deterministic\\\": \\\"false\\\", \\\"norc\\\": \\\"false\\\", \\\"seed\\\": \\\"\\\", \\\"skip\\\": \\\"\\\", \\\"trim3\\\": \\\"\\\", \\\"trim5\\\": \\\"\\\", \\\"upto\\\": \\\"\\\"}\"}",
             "tool_version": "1.0.3",
             "type": "tool",
-            "uuid": "f1ff2942-6c18-4ccc-bacd-0bc04ed18d70",
+            "uuid": "9ee8a41b-4ec3-4eb7-a260-9b374c9b3142",
             "workflow_outputs": []
         },
         "2": {
@@ -131,15 +115,13 @@
                 }
             ],
             "position": {
-                "left": 965.5,
-                "top": 289
+                "left": 751,
+                "top": 384
             },
             "post_job_actions": {
-                "RenameDatasetActionoutfile": {
-                    "action_arguments": {
-                        "newname": "centrifuge.tsv"
-                    },
-                    "action_type": "RenameDatasetAction",
+                "HideDatasetActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
                     "output_name": "outfile"
                 }
             },
@@ -153,17 +135,63 @@
             "tool_state": "{\"sortkeys\": \"[{\\\"__index__\\\": 0, \\\"column\\\": \\\"7\\\", \\\"order\\\": \\\"r\\\", \\\"style\\\": \\\"g\\\"}]\", \"__page__\": null, \"ignore_case\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"header\": \"\\\"1\\\"\", \"unique\": \"\\\"false\\\"\", \"infile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
             "tool_version": "1.1.1",
             "type": "tool",
-            "uuid": "eb406815-4488-43dd-927d-606321f0bdc8",
+            "uuid": "eb7cca4f-f0fc-4d87-abd3-411f5f4f8115",
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "irida.corefacility.ca/galaxy-shed/repos/irida/bundle_collections/bundle_collection/1.0.2",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "outfile"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Bundle Collection",
+            "outputs": [
+                {
+                    "name": "html_file",
+                    "type": "html"
+                }
+            ],
+            "position": {
+                "left": 1040,
+                "top": 376
+            },
+            "post_job_actions": {
+                "RenameDatasetActionhtml_file": {
+                    "action_arguments": {
+                        "newname": "report.zip"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "html_file"
+                }
+            },
+            "tool_id": "irida.corefacility.ca/galaxy-shed/repos/irida/bundle_collections/bundle_collection/1.0.2",
+            "tool_shed_repository": {
+                "changeset_revision": "7bc329e1ada4",
+                "name": "bundle_collections",
+                "owner": "irida",
+                "tool_shed": "irida.corefacility.ca/galaxy-shed"
+            },
+            "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
+            "tool_version": "1.0.2",
+            "type": "tool",
+            "uuid": "15bb7719-145a-4084-b94d-2ce1cc100f50",
             "workflow_outputs": [
                 {
-                    "label": null,
-                    "output_name": "outfile",
-                    "uuid": "239526ed-0b53-4aa9-aee6-30df9b4c43d0"
+                    "label": "report",
+                    "output_name": "html_file",
+                    "uuid": "bd2167df-801b-4912-9049-621537221985"
                 }
             ]
         }
     },
     "tags": [],
-    "uuid": "6faea904-e10d-43f7-9075-cd75d1e179d9",
-    "version": 4
+    "uuid": "e88b41a2-ef54-495d-a06f-fff7b31fd1bf",
+    "version": 13
 }
